@@ -48,14 +48,14 @@
 
 	•	K-Means Clustering:
 	•	Apply k-means to group similar grids.
-	•	Determine the optimal number of clusters (e.g., elbow method).
+	•	Determine the optimal number of clusters using elbow method.
 	•	Edge Cases:
 	•	Handle grids near edges or isolated outliers.
 
 ## 6. Visualization
 
 	•	Color Mapping:
-	•	Use color codes (e.g., plt.cm.tab10) to distinguish clusters.
+	•	Use color codes  to distinguish clusters.
 	•	Plotting:
 	•	2D Plotting: Represent each grid as a colored rectangle.
 	•	3D Plotting: Optionally visualize in 3D, excluding grids with zero similarity.
