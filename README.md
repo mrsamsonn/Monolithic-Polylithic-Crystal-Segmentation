@@ -4,6 +4,7 @@
 | ------------- | ------------- |
 
 ## Example Output
+![animated_plot](https://github.com/user-attachments/assets/b88677aa-dcc2-4830-8c0a-a34aa9fa2030)
 <img width="240" alt="Screenshot 2024-08-16 at 12 49 22 PM" src="https://github.com/user-attachments/assets/687860e8-5789-4e8c-9a49-b7fea5fbd1a8">
 <img width="366" alt="Screenshot 2024-08-16 at 12 49 31 PM" src="https://github.com/user-attachments/assets/4e69d6d6-e2f6-4011-ba62-a9b21d8cfb16">
 
