@@ -59,7 +59,7 @@ For each grid, local maxima are identified using a peak detection algorithm. The
 
 from scipy.signal import find_peaks
 
-```
+```python
 def detect_peaks(grid):
     """
     Detects peaks in the grid data using scipy's find_peaks function.
@@ -72,7 +72,7 @@ def detect_peaks(grid):
 
 For each grid, features such as peak intensity and spatial distribution are extracted into a feature vector. These features are essential for clustering.
 
-```
+```python
 def extract_features(grid, peaks):
     """
     Extracts features from the grid based on the detected peaks.
@@ -90,7 +90,7 @@ def extract_features(grid, peaks):
 
 The features are clustered using k-means. The optimal number of clusters is determined using the elbow method.
 
-```
+```python
 from sklearn.cluster import KMeans
 
 def cluster_features(features, n_clusters=3):
@@ -106,7 +106,7 @@ def cluster_features(features, n_clusters=3):
 
 Finally, the clusters are visualized using matplotlib. Each grid cell is colored based on the cluster it belongs to.
 
-```
+```python
 import matplotlib.pyplot as plt
 
 def plot_clusters(clusters, grid_size, data_shape):
