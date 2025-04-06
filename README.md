@@ -19,12 +19,11 @@ This project segments diffraction patterns into square grids, each analyzed for 
 
 ## Screenshots
 
-### Animated Segmentation
-![Animated Plot](./animated_plot.gif)
-
 ### Clustered Output Examples
-![Output Example 1](./Screenshot%202024-08-16%20at%2012.49.22%20PM.png)
-![Output Example 2](./Screenshot%202024-08-16%20at%2012.49.31%20PM.png)
+## Example Output
+ ![animated_plot](https://github.com/user-attachments/assets/b88677aa-dcc2-4830-8c0a-a34aa9fa2030)
+ <img width="240" alt="Screenshot 2024-08-16 at 12 49 22 PM" src="https://github.com/user-attachments/assets/687860e8-5789-4e8c-9a49-b7fea5fbd1a8">
+ <img width="366" alt="Screenshot 2024-08-16 at 12 49 31 PM" src="https://github.com/user-attachments/assets/4e69d6d6-e2f6-4011-ba62-a9b21d8cfb16">
 
 ## Algorithm Explanation
 
@@ -52,23 +51,28 @@ def create_grid(data, grid_size):
     
     return grids
 
+```
+
 2. Peak Detection
 
 For each grid, local maxima are identified using a peak detection algorithm. The scipy.signal.find_peaks function is often employed for this purpose.
 
 from scipy.signal import find_peaks
 
+```
 def detect_peaks(grid):
     """
     Detects peaks in the grid data using scipy's find_peaks function.
     """
     peaks, _ = find_peaks(grid)
     return peaks
+```
 
 3. Feature Extraction
 
 For each grid, features such as peak intensity and spatial distribution are extracted into a feature vector. These features are essential for clustering.
 
+```
 def extract_features(grid, peaks):
     """
     Extracts features from the grid based on the detected peaks.
@@ -80,11 +84,13 @@ def extract_features(grid, peaks):
         features.append([intensity, position])
     
     return np.array(features)
+```
 
 4. Clustering
 
 The features are clustered using k-means. The optimal number of clusters is determined using the elbow method.
 
+```
 from sklearn.cluster import KMeans
 
 def cluster_features(features, n_clusters=3):
@@ -94,11 +100,13 @@ def cluster_features(features, n_clusters=3):
     kmeans = KMeans(n_clusters=n_clusters)
     clusters = kmeans.fit_predict(features)
     return clusters
+```
 
 5. Visualization
 
 Finally, the clusters are visualized using matplotlib. Each grid cell is colored based on the cluster it belongs to.
 
+```
 import matplotlib.pyplot as plt
 
 def plot_clusters(clusters, grid_size, data_shape):
@@ -122,6 +130,7 @@ def plot_clusters(clusters, grid_size, data_shape):
     plt.title('Cluster Visualization')
     plt.colorbar()
     plt.show()
+```
 
 Setup Instructions
 
@@ -131,13 +140,17 @@ Prerequisites
 
 Install Dependencies
 
+```
 pip install numpy matplotlib scikit-learn tifffile
+```
 
 Clone and Run
 
+```
 git clone https://github.com/mrsamsonn/Monolithic-Polylithic-Crystal-Segmentation.git
 cd Monolithic-Polylithic-Crystal-Segmentation
 jupyter notebook Grid_Segmentation.ipynb
+```
 
 Usage
 	1.	Open Grid_Segmentation.ipynb in Jupyter Notebook.
@@ -152,6 +165,7 @@ The segmentation process outputs:
 
 Project Structure
 
+```
 Monolithic-Polylithic-Crystal-Segmentation/
 │
 ├── Grid_Segmentation.ipynb   # Main analysis notebook
@@ -159,6 +173,7 @@ Monolithic-Polylithic-Crystal-Segmentation/
 ├── *.png                     # Sample output images
 ├── README.md                 # Project documentation
 └── data/                     # Input diffraction files (user-provided)
+```
 
 Future Work
 	•	Dynamic Grid Resizing: Implement adaptive grid resizing based on the size of detected structures.
