@@ -2,9 +2,14 @@
 
 This project provides a grid-based segmentation approach to identify monolithic and polylithic crystal structures from diffraction patterns. The method partitions diffraction data into grids, detects peaks in each tile, extracts features, and applies k-means clustering for grouping similar diffraction patterns.
 
+## Clustered Output Examples
+ ![animated_plot](https://github.com/user-attachments/assets/b88677aa-dcc2-4830-8c0a-a34aa9fa2030)
+ <img width="240" alt="Screenshot 2024-08-16 at 12 49 22 PM" src="https://github.com/user-attachments/assets/687860e8-5789-4e8c-9a49-b7fea5fbd1a8">
+ <img width="366" alt="Screenshot 2024-08-16 at 12 49 31 PM" src="https://github.com/user-attachments/assets/4e69d6d6-e2f6-4011-ba62-a9b21d8cfb16">
+
 ## Table of Contents
+- [Output Example](#output-example)
 - [Overview](#overview)
-- [Screenshots](#screenshots)
 - [Algorithm Explanation](#algorithm-explanation)
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
@@ -16,14 +21,6 @@ This project provides a grid-based segmentation approach to identify monolithic 
 ## Overview
 
 This project segments diffraction patterns into square grids, each analyzed for peak detection. The algorithm then clusters the grids using k-means and visualizes the segmented diffraction patterns to identify monolithic vs. polylithic structures.
-
-## Screenshots
-
-### Clustered Output Examples
-## Example Output
- ![animated_plot](https://github.com/user-attachments/assets/b88677aa-dcc2-4830-8c0a-a34aa9fa2030)
- <img width="240" alt="Screenshot 2024-08-16 at 12 49 22 PM" src="https://github.com/user-attachments/assets/687860e8-5789-4e8c-9a49-b7fea5fbd1a8">
- <img width="366" alt="Screenshot 2024-08-16 at 12 49 31 PM" src="https://github.com/user-attachments/assets/4e69d6d6-e2f6-4011-ba62-a9b21d8cfb16">
 
 ## Algorithm Explanation
 
